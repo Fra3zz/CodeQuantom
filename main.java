@@ -6,8 +6,20 @@ public class main {
         Scanner scnr = new Scanner(System.in);
         int sanity = 100;
         String userName;
+        boolean DEBUG = true;
 
-        //Defining username
+        //Defining username from user input
+        System.out.println("You remembered your name is: ");
+        userName = scnr.nextLine().toString();
+        while(userName.isEmpty()){
+            System.out.println("You rememberd your name is: ");
+            userName = scnr.nextLine().toString();
+        }
+
+        if(DEBUG){
+            System.out.println(userName);
+        }
+
 
 
         //Beginning of story
