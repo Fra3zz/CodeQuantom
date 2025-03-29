@@ -19,29 +19,37 @@ public class Main {
             System.out.println("3. A tea party with the Mad Hatter and March Hare");
             System.out.println("4. The Cheshire Cat's tree");
             System.out.println("5. Try to wake up from this dream");
-            System.out.print("Where would you like to go (1-5):.");
+            System.out.print("Where would you like to go (1-5): ");
 
             int choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
                     if (hasKey) {
-                    System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
+                    System.out.println("\nThe table is empty now.  You already have the key. " );
                     hasKey = true;
                     } else {
-                        System.out.println("\nThe table is empty now.  You already have the key. ");
+                        System.out.println("\nYou pick up the tiny golden key. Maybe it opens something? ");
                     }
-                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
+                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby next to a cake labeled 'EAT ME'. Which do you take? (drink/cake) ");
                     String drinkChoice = scanner.next();
-                    if (drinkChoice.equalsIgnoreCase("yes")) {
-                        System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
+                    if (drinkChoice.equalsIgnoreCase("drink")) {
+                        System.out.println("\nYou shrink to a tiny size! Now you can explore the rest of Wonderland. ");
                         hasDrink = true;
-                    } else {
-                        System.out.println("\nYou remain your current size.");
+                    }else if(drinkChoice.equalsIgnoreCase("cake")) {
+                        System.out.println("\nYou start growing filling the once large room. Try the drink? (yes/no) ");
+                        drinkChoice = scanner.next();
+                        if(drinkChoice.equalsIgnoreCase("yes")){
+                          System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
+                          hasDrink = true;
+                        }else{
+                            System.out.println("There is nothing here for you. ");
+                        }
                     }
                     break;
 
             }
         }
+ 
     }
 }
