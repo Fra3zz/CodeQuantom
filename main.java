@@ -1,52 +1,55 @@
 import java.util.Scanner;
 public class main {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-         
+
+        System.out.println("Welcome to Alice's Adventure is Wonderland!");
+        System.out.println("You find yourself falling down a very deep rabbit hole... ");
+        System.out.println("After what feels like hours, you land softly on pile of leaves.");
+
+        boolean hasKey = false;
+        boolean hasCake = false;
+        boolean hasDrink = false;
+        boolean metCheshire = false;
         int sanity = 100;
         String userName;
-        boolean DEBUG = true;
         int userChoice;
         int choiceOne = 1;
-        int choiceTwo = 2;
 
-        //Defining username from user input
-        System.out.println("You remembered your name is: ");
-        userName = scnr.nextLine().toString();
-        while(userName.isEmpty()){
-            System.out.println("You rememberd your name is: ");
-            userName = scnr.nextLine().toString();
-        }
-
-        if(DEBUG){
-            System.out.printf("User name: %s", userName);
-        }
-
-        while(sanity > 0){
-            //Door Mouse Trial
-            System.out.println(""); //Opening context
-            userChoice = scnr.nextInt();
-
-            //Request user choice again
-            while(userChoice != choiceOne || userChoice != choiceTwo) {
-                System.out.print("Please input the number of your choice: ");
-                userChoice = scnr.nextInt();
-            }
-
-            //Do action on user choice
-            if( userChoice == choiceOne){
-            System.out.println("");
-            } else {
-                sanity = sanity - 30;
-            }
-            
-
+        //Define username
+        System.out.println("Please input your name: ");
+        userName = scanner.nextLine().toString();
+        while (userName.isBlank()){
+            System.out.println("Please input your name: ");
+            userName = scanner.nextLine().toString();
         }
         
 
+        while (true) {
+            System.out.println("\nYou see several paths:");
+            System.out.println("1. A small door with a tiny golden key on a table");//Done
+            System.out.println("2. A garden with a talking caterpillar on a mushroom");
+            System.out.println("3. A tea party with the Mad Hatter and March Hare"); //Done
+            System.out.println("4. The Cheshire Cat's tree");
+            System.out.println("5. Try to wake up from this dream");
+            System.out.print("Where would you like to go (1-5):");
 
-
-        //Beginning of story
+            int choice = scanner.nextInt();
+                    if (hasKey) {
+                    System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
+                    hasKey = true;
+                    } else {
+                        System.out.println("\nThe table is empty now.");
+                    }
+                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
+                    String drinkChoice = scanner.next();
+                    if (drinkChoice.equalsIgnoreCase("yes")) {
+                        System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
+                        hasDrink = true;
+                    } else {
+                        System.out.println("\nYou remain your current size.");
+                    }
+                    
 
         //Trials 1, 2, 3 ...
         
@@ -55,9 +58,9 @@ public class main {
         System.out.printf("\nThe focus of the table shifts to the figure sitting at the head. With an unhinged yellow smile, the Hatter passes you a cup of tea. Its murky composition makes you refrain from drinking it.");
         System.out.println("\"SO!\" The Hatter slams his fists on the table with a wild glint in his eye, \"It's a lovely day outside, is it not?\"");
         System.out.println("What do you say? (Enter 1 or 2):\n1.) \"It sure is!\"\n2.) \"No, it's absolutely dreadful!\"");
-        userChoice = scnr.nextInt();
+        choice = scanner.nextInt();
         //bad choice
-        if(userChoice == choiceOne){
+        if(choice == 1){
             System.out.printf("\n\"%s, you are as BLIND as a BAT! Can you believe this, Hare?\" The Hatter bewilderdly looks at the March Hare, who is much too focused on trying to fit an entire teacup into his mouth to notice or care.", userName);
             System.out.println("The Hatter picks up a saucer and breaks it over the table. The shards fly into the air, one narrowly missing your hands as they shield your face.");
         }
@@ -70,9 +73,9 @@ public class main {
         //hatter asks alice about her opinion on something
         System.out.println("\n\"Where did you say you were from?\" The Hatter turns to look at you so quickly that his neck cracks slightly.");
         System.out.println("What do you say? (enter either 1 or 2):\n1.) \"Not here.\"\n2.) \"Oh, I'm from England.\"");
-        userChoice = scnr.nextInt();
+        choice = scanner.nextInt();
         //bad choice
-        if(userChoice == choiceTwo){
+        if(choice == 2){
             System.out.println("\"PREPOSTEROUS, WE DO NOT TOLERATE EXPLICATIVES AT THIS TABLE! MIND YOUR MANNERS!\" The Hatter downs an entire teacup of boiling tea, shaking his head angrily as he does so.");
         }
         //good choice
@@ -85,9 +88,9 @@ public class main {
         System.out.println("\"I haven't the foggiest idea as to what you're talking about.\" The March Hare sleepily yawns. He puts his head down, narrowly missing the teapot that the Hatter hurls at him.");
         System.out.println("\"ALICE!!!!! ALICE TELL HIM HE'S WRONGNGNGHHHHH!\" The Hatter wails as he rolls around on the ground, slamming his fists on the dirt.");
         System.out.println("What do you say? (enter either 1 or 2):\n1.)\"The Hatter is right, Hare you must apologize at ONCE.\" \n2.)\"Hatter, your shoes are in pristine condition.\"");
-        userChoice = scnr.nextInt();
+        userChoice = scanner.nextInt();
         //bad choice
-        if(userChoice == choiceTwo){
+        if(userChoice == 2){
             System.out.println("\"EVERYONE IS SO MEAN TO ME. WHY HAVE A TEAPARTY IF NONE OF US WILL REMEMBER IT FONDLY?\" The Hatter rips off his shoe and throws it onto the table, smushing a plate of untouched teabiscuits. A shame, really. You were going to eat those.");
         }
         //good choice
@@ -99,9 +102,9 @@ public class main {
         System.out.printf("\n\"%s, I would like to ask you something.\" The Hatter laments, sitting back down at the table and lacing his fingers together. He looks around, as if he wants to ensure nobody else is listening (despite being at the head of a table at a party with several people in attendance).", userName);
         System.out.println("Why is a RAVEN like a WRIITNG DESK?");
         System.out.println("What do you say? (enter either 1 or 2):\n1.)\"They both involve feathers-- the raven grows them and the desk uses them in the form of quills.\" \n2.)\"I don't know.\"");
-        userChoice = scnr.nextInt();
+        userChoice = scanner.nextInt();
         //bad choice
-        if(userChoice == choiceOne){
+        if(userChoice == 1){
             System.out.println("The Hatter's inquisitive grimace turns to a dreadful frown. He stands up, towering over you, before grabbing his dingy metal chair and hurling it at you.");
             System.out.println("\"OUTTTTTTTTT! YOU DO NOT BELONG IN THE KINGDOM OF SUNSHINE AS A WORM MOROSELY CRAWLING ACROSS THE PAVEMENT OF MY LIFE! AWAY! AWAY WITH YOU!\" He shrieks, commencing to chase you away from the party. He gets smaller and smaller every time you look over your shoulder until he's out of sight completely.");
         }
@@ -114,7 +117,6 @@ public class main {
         //statement the user gets if they were able to survive the trial
         System.out.println("For better or for worse, you have successfully left the teaparty.");
 
-
-        
+            }
+        }
     }
-}
