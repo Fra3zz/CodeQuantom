@@ -7,9 +7,9 @@ public class main {
         int sanity = 100;
         String userName;
         boolean DEBUG = true;
-        String userChoice;
-        String choiceOne;
-        String choiceTwo;
+        int userChoice;
+        int choiceOne = 1;
+        int choiceTwo = 2;
 
         //Defining username from user input
         System.out.println("You remembered your name is: ");
@@ -24,15 +24,25 @@ public class main {
         }
 
         while(sanity > 0){
-            //Levels here
+            //Door Mouse Trial
+            System.out.println(""); //Opening context
+            userChoice = scnr.nextInt();
 
+            //Request user choice again
+            while(userChoice != choiceOne || userChoice != choiceTwo) {
+                System.out.print("Please input the number of your choice: ");
+                userChoice = scnr.nextInt();
+            }
+
+            //Do action on user choice
+            if( userChoice == choiceOne){
+            System.out.println("");
+            } else {
+                sanity = sanity - 30;
+            }
+            
 
         }
-
-
-        //Door Mouse Trial
-
-        System.out.println(""); //Opening context
         
 
 
