@@ -31,7 +31,7 @@ public class Main {
                     } else {
                         System.out.println("\nThe table is empty now.  You already have the key. ");
                     }
-                    System.out.println("Thh door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
+                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
                     String drinkChoice = scanner.next();
                     if (drinkChoice.equalsIgnoreCase("yes")) {
                         System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
