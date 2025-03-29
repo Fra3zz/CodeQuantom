@@ -13,6 +13,7 @@ public class main {
         boolean metCheshire = false;
 
         String userName;
+        int sanity =100;
 
         //Define username
         System.out.println("Please input your name: ");
@@ -35,7 +36,7 @@ public class main {
             int choice = scanner.nextInt();
 
             switch (choice) {
-                case 1:
+                case 1: //Level 1
                     if (hasKey) {
                     System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
                     hasKey = true;
@@ -51,6 +52,8 @@ public class main {
                         System.out.println("\nYou remain your current size.");
                     }
                     break;
+
+
 
             }
         }
