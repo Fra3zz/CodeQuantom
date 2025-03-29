@@ -96,7 +96,7 @@ public class main {
         }
         //good choice
         else{
-            System.out.println("\"You're from Not Nere? Well, what a coincidence. So is my cousin!\" The Hatter shakes his head as he laughs jauntily. \"If I had a cousin, I mean.\" The Hatter then proceeds to sneeze without covering his mouth.");
+            System.out.println("\"You're from Not Here? Well, what a coincidence. So is my cousin!\" The Hatter shakes his head as he laughs jauntily. \"If I had a cousin, I mean.\" The Hatter then proceeds to sneeze without covering his mouth.");
         }
 
         //hatter gets into a spat with the March Hare
