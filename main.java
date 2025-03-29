@@ -7,6 +7,9 @@ public class main {
         int sanity = 100;
         String userName;
         boolean DEBUG = true;
+        String userChoice;
+        String choiceOne;
+        String choiceTwo;
 
         //Defining username from user input
         System.out.println("You remembered your name is: ");
@@ -17,8 +20,20 @@ public class main {
         }
 
         if(DEBUG){
-            System.out.println(userName);
+            System.out.printf("User name: %s", userName);
         }
+
+        while(sanity > 0){
+            //Levels here
+
+
+        }
+
+
+        //Door Mouse Trial
+
+        System.out.println(""); //Opening context
+        
 
 
 
