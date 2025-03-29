@@ -19,19 +19,19 @@ public class Main {
             System.out.println("3. A tea party with the Mad Hatter and March Hare");
             System.out.println("4. The Cheshire Cat's tree");
             System.out.println("5. Try to wake up from this dream");
-            System.out.print("Where would you like to go (1-5):.");
+            System.out.print("Where would you like to go (1-5): ");
 
             int choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
                     if (hasKey) {
-                    System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
+                    System.out.println("\nThe table is empty now.  You already have the key. " );
                     hasKey = true;
                     } else {
-                        System.out.println("\nThe table is empty now.  You already have the key. ");
+                        System.out.println("\nYou pick up the tiny golden key. Maybe it opens something? ");
                     }
-                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
+                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby. Do you drink it? (yes/no) ");
                     String drinkChoice = scanner.next();
                     if (drinkChoice.equalsIgnoreCase("yes")) {
                         System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
@@ -43,5 +43,6 @@ public class Main {
 
             }
         }
+ 
     }
 }
