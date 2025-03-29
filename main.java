@@ -36,11 +36,11 @@ public class main {
 
             //Level 1
             int choice = scanner.nextInt();
-                    if (hasKey) {
+                    if (!hasKey) {
                     System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
                     hasKey = true;
                     } else {
-                        System.out.println("\nThe table is empty now.");
+                        System.out.println("\nThe table is empty.");
                     }
                     System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
                     String drinkChoice = scanner.next();
