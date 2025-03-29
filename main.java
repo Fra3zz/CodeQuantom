@@ -36,21 +36,22 @@ public class main {
 
             //Level 1
             int choice = scanner.nextInt();
+            if(choice == 1){
                     if (!hasKey) {
                     System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
                     hasKey = true;
                     } else {
                         System.out.println("\nThe table is empty.");
                     }
-                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
+                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby. Do you drink it (yes/no):");
                     String drinkChoice = scanner.next();
                     if (drinkChoice.equalsIgnoreCase("yes")) {
                         System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
                         hasDrink = true;
                     } else {
-                        System.out.println("\nYou remain your current size.");
+                        System.out.println("\nThere is nothing for you here.");
                     }
-                    
+            }
 
         //Level 2
         if(choice == 2){
@@ -69,6 +70,7 @@ public class main {
         
         //TRIAL 3 START
         //hatter talks to alice, asks her a question about the weather
+            if(choice == 3){
         System.out.printf("\nThe focus of the table shifts to the figure sitting at the head. With an unhinged yellow smile, the Hatter passes you a cup of tea. Its murky composition makes you refrain from drinking it.");
         System.out.println("\"SO!\" The Hatter slams his fists on the table with a wild glint in his eye, \"It's a lovely day outside, is it not?\"");
         System.out.println("What do you say? (Enter 1 or 2):\n1.) \"It sure is!\"\n2.) \"No, it's absolutely dreadful!\"");
@@ -130,6 +132,7 @@ public class main {
 
         //statement the user gets if they were able to survive the trial
         System.out.println("For better or for worse, you have successfully left the teaparty.");
+            }
 
 
         //Level 4
