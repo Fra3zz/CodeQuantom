@@ -14,7 +14,6 @@ public class main {
         int sanity = 100;
         String userName;
         int userChoice;
-        int choiceOne = 1;
 
         //Define username
         System.out.println("Please input your name: ");
@@ -34,6 +33,8 @@ public class main {
             System.out.println("5. Try to wake up from this dream");
             System.out.print("Where would you like to go (1-5):");
 
+
+            //Level 1
             int choice = scanner.nextInt();
                     if (hasKey) {
                     System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
@@ -51,7 +52,20 @@ public class main {
                     }
                     
 
-        //Trials 1, 2, 3 ...
+        //Level 2
+        if(choice == 2){
+            System.out.println("\nThe caterpillar blows smoke rings at you and asks: 'Who...are...you?'");
+        System.out.println("Nearby you see mushroom with one side labeled 'EAT Me'");
+        System.out.println("Would you like to eat some mushroom? (yes/no)");
+        String eatChoice = scanner.next();
+        if (eatChoice.equalsIgnoreCase("yes")) {
+            System.out.println("\nYou grow to an enormous size! Birds are now at eye level.");
+            System.out.println("A cake labeled 'EAT ME' falls from a tree. You pick it up.");
+            hasCake = true;
+        } else {
+            System.out.println("\nThe caterpillar shrugs and continues smoking.");
+        }
+        }
         
         //TRIAL 3 START
         //hatter talks to alice, asks her a question about the weather
@@ -117,6 +131,30 @@ public class main {
         //statement the user gets if they were able to survive the trial
         System.out.println("For better or for worse, you have successfully left the teaparty.");
 
+
+        //Level 4
+        if(choice == 4){
+            //level 4
+            if (metCheshire) {
+                System.out.println("\nA grin appears in the air, followed by the rest of the Cheshire Cat.");
+                System.out.println("'We're all mad here,' says the car. 'You must be mad too or you wouldn't have come.'");
+                System.out.println("The cat disappears slowly, leaving only its grin floating in the air.");
+                metCheshire = true;
+            } else {
+                System.out.println("\nThe floating grin remains.  You hear a voice. 'Imagination is the only weapon in the war againsy reality,'");
+            }
+        }
+
+        //Level 5 Final
+        if(choice == 5){
+            //level 5
+            System.out.println("\nYou pinch yourself and suddenly wake up in a field of bluebonnets.");
+            System.out.println("Your sister is nearby, asking if you had a nice nap.");
+            System.out.println("Was it all a dream?");
+            System.out.println("\nTHE END");
+            scanner.close();
+            return;
+        }
             }
         }
     }
