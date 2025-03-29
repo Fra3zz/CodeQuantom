@@ -1,59 +1,58 @@
 import java.util.Scanner;
-
 public class main {
-
-//Switched to main_idea.java for use with switch statments
-
     public static void main(String[] args) {
-        Scanner scnr = new Scanner(System.in);
-        int sanity = 100;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to Alice's Adventure is Wonderland!");
+        System.out.println("You find yourself falling down a very deep rabbit hole... ");
+        System.out.println("After what feels like hours, you land softly on pile of leaves.");
+
+        boolean hasKey = false;
+        boolean hasCake = false;
+        boolean hasDrink = false;
+        boolean metCheshire = false;
+
         String userName;
-        boolean DEBUG = true;
-        int userChoice;
-        int choiceOne = 1;
-        int choiceTwo = 2;
 
-        //Defining username from user input
-        System.out.println("You remembered your name is: ");
-        userName = scnr.nextLine().toString();
-        while(userName.isEmpty()){
-            System.out.println("You rememberd your name is: ");
-            userName = scnr.nextLine().toString();
-        }
-
-        if(DEBUG){
-            System.out.printf("User name: %s", userName);
-        }
-
-        while(sanity > 0){
-            //Door Mouse Trial
-            System.out.println(""); //Opening context
-            userChoice = scnr.nextInt();
-
-            //Request user choice again
-            while(userChoice != choiceOne || userChoice != choiceTwo) {
-                System.out.print("Please input the number of your choice: ");
-                userChoice = scnr.nextInt();
-            }
-
-            //Do action on user choice
-            if( userChoice == choiceOne){
-            System.out.println("");
-            } else {
-                sanity = sanity - 30;
-            }
-            
-
+        //Define username
+        System.out.println("Please input your name: ");
+        userName = scanner.nextLine().toString();
+        while (userName.isBlank()){
+            System.out.println("Please input your name: ");
+            userName = scanner.nextLine().toString();
         }
         
 
+        while (true) {
+            System.out.println("\nYou see several paths:");
+            System.out.println("1. A small door with a tiny golden key on a table");
+            System.out.println("2. A garden with a talking caterpillar on a mushroom");
+            System.out.println("3. A tea party with the Mad Hatter and March Hare");
+            System.out.println("4. The Cheshire Cat's tree");
+            System.out.println("5. Try to wake up from this dream");
+            System.out.print("Where would you like to go (1-5):.");
 
+            int choice = scanner.nextInt();
 
-        //Beginning of story
+            switch (choice) {
+                case 1:
+                    if (hasKey) {
+                    System.out.println("\nYou pick up the tiny golden key. Maybe it opens something?");
+                    hasKey = true;
+                    } else {
+                        System.out.println("\nThe table is empty now.  You already have the key. ");
+                    }
+                    System.out.println("The door is too small to enter.  You notice a bottle labeled 'DRINK ME' nearby.");
+                    String drinkChoice = scanner.next();
+                    if (drinkChoice.equalsIgnoreCase("yes")) {
+                        System.out.println("\nYou shrink to a tiny size! Now you can enter the door.");
+                        hasDrink = true;
+                    } else {
+                        System.out.println("\nYou remain your current size.");
+                    }
+                    break;
 
-        //Trials 1, 2, 3 ...
-
-
-        
+            }
+        }
     }
 }
