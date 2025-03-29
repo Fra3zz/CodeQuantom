@@ -4,11 +4,16 @@ public class main {
 
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
-        int health = 100;
+        int sanity = 100;
+        String userName;
+
+        //Defining username
 
 
         //Beginning of story
-        
+
+        //Trials 1, 2, 3 ...
+
 
         
     }
