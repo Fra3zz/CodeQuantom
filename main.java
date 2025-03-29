@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class main {
 
+//Switched to main_idea.java for use with switch statments
+
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         int sanity = 100;
